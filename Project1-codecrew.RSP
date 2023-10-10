@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#pragma warning(disable:4996)
+
+int main()
+{
+	srand(time(NULL));
+	int com = (rand() % 3) + 1;
+	int user, sum;
+	
+	printf("가위(1),바위(2),보(3)을 입력하세요.: ");
+	scanf("%d", &user);
+	printf("컴퓨터:%d\n", com);
+
+	sum = user - com;
+
+	switch (sum)
+	{
+	case 0:
+		printf("비겼습니다.\n");
+		break;
+	case 1:
+		printf("유저 승, 컴퓨터 패\n");
+		break;
+	case -2:
+		printf("유저 승, 컴퓨터 패\n");
+		break;
+	case -1:
+		printf("유저 패, 컴퓨터 승\n");
+		break;
+	case 2:
+		printf("유저 패, 컴퓨터 승\n");
+		break;
+	}
+
+	return 0;
+}
